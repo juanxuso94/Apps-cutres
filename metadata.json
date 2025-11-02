@@ -1,0 +1,5 @@
+{
+  "name": "Gestor de Gastos",
+  "description": "Una aplicación de finanzas personales para controlar ingresos, gastos y transferencias entre diferentes cuentas. Los usuarios pueden crear categorías y ver resúmenes en un panel, diseñado con un tema limpio de coral y blanco para una experiencia móvil.",
+  "requestFramePermissions": []
+}
