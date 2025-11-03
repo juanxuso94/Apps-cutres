@@ -47,17 +47,17 @@ const App: React.FC = () => {
     <ThemeProvider>
         <AppContextProvider userKey="local-user-data">
         <div className="flex flex-col h-screen bg-gray-50 dark:bg-gray-900 font-sans">
-            <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 sticky top-0 z-10">
+            <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 sticky top-0 z-10 pt-[calc(1rem+env(safe-area-inset-top))]">
                 <h1 className="text-xl font-bold text-gray-800 dark:text-gray-200 text-center">
                    {getTitleForView(currentView)}
                 </h1>
             </header>
 
-            <main className="flex-1 overflow-y-auto pb-20">
+            <main className="flex-1 overflow-y-auto pb-[calc(5rem+env(safe-area-inset-bottom))]">
                  {renderView()}
             </main>
             
-            <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex justify-around z-10">
+            <nav className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 flex justify-around z-10 pb-[env(safe-area-inset-bottom)]">
                 <NavButton isActive={currentView === 'dashboard'} onClick={() => setCurrentView('dashboard')}>
                     <HomeIcon className="h-6 w-6 mb-1" />
                     <span>Panel</span>
